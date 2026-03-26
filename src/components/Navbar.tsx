@@ -4,14 +4,10 @@ import { Menu, X, Mountain } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/packages", label: "Packages" },
   { href: "/rafting", label: "Rafting" },
   { href: "/camping", label: "Camping" },
-  { href: "/char-dham", label: "Char Dham" },
   { href: "/custom-trips", label: "Custom Trips" },
-  { href: "/reviews", label: "Reviews" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Book Now" },
 ];
 
 export default function Navbar() {
@@ -32,20 +28,22 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "backdrop-blur-xl bg-navy/90 border-b border-white/10 shadow-2xl"
-          : "bg-transparent"
+        location.pathname === "/"
+          ? scrolled
+            ? "backdrop-blur-xl bg-background/80 border-b border-primary/10 shadow-md"
+            : "bg-transparent"
+          : "backdrop-blur-xl bg-background/80 border-b border-primary/10 shadow-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-river-blue to-forest-green flex items-center justify-center shadow-lg">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
               <Mountain className="w-5 h-5 text-white" />
             </div>
-            <span className="font-display text-xl font-bold text-white tracking-wide">
-              Akihi <span className="text-saffron">Tales</span>
+            <span className="font-display text-xl font-bold text-foreground tracking-wide">
+              Akihi <span className="text-primary">Tales</span>
             </span>
           </Link>
 
@@ -57,8 +55,10 @@ export default function Navbar() {
                 to={link.href}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   location.pathname === link.href
-                    ? "text-saffron"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    ? "text-primary"
+                    : (location.pathname === "/" ? scrolled : true) 
+                      ? "text-foreground/70 hover:text-foreground hover:bg-black/5" 
+                      : "text-white/90 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {link.label}
@@ -74,7 +74,9 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+            className={`lg:hidden p-2 rounded-lg transition-colors ${
+              (location.pathname === "/" ? scrolled : true) ? "text-foreground hover:bg-black/5" : "text-white hover:bg-white/10"
+            }`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -89,15 +91,15 @@ export default function Navbar() {
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="backdrop-blur-xl bg-navy/95 border-t border-white/10 px-4 py-4 space-y-1">
+        <div className="backdrop-blur-xl bg-background/95 border-t border-primary/10 px-4 py-4 space-y-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
               className={`block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                 location.pathname === link.href
-                  ? "bg-river-blue/20 text-saffron"
-                  : "text-white/80 hover:text-white hover:bg-white/10"
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground/80 hover:text-foreground hover:bg-black/5"
               }`}
             >
               {link.label}

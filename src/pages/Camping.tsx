@@ -79,27 +79,27 @@ export default function Camping() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${campfire})` }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="relative text-center px-4 max-w-4xl mx-auto pt-20">
-          <span className="text-saffron text-sm font-semibold tracking-widest uppercase font-body">Camping & Adventure</span>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mt-3 mb-5">
+          <span className="text-white/80 text-sm font-semibold tracking-widest uppercase font-body">Camping & Adventure</span>
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mt-3 mb-5 drop-shadow-xl">
             Sleep Under the Stars,
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-forest-green to-saffron">
+            <span className="text-gradient block">
               Dare the Unknown
             </span>
           </h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+          <p className="text-white/90 text-lg max-w-2xl mx-auto drop-shadow-md">
             Riverside camps, bonfire nights, paragliding, bungee, and everything in between.
           </p>
         </div>
       </section>
 
       {/* Camping Section */}
-      <section className="py-20 px-4 bg-navy-light">
+      <section className="py-20 px-4 bg-[#FFF9F5]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-saffron text-sm font-semibold tracking-widest uppercase">Camp Life</span>
-            <h2 className="section-title text-white mt-2">Camping Experiences</h2>
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">Camp Life</span>
+            <h2 className="section-title mt-2">Camping Experiences</h2>
             <p className="section-subtitle">The most beautiful campsite on the banks of the holy Ganga.</p>
           </div>
 
@@ -108,17 +108,17 @@ export default function Camping() {
               <img src={riversideCamping} alt="Riverside Camping" className="w-full h-full object-cover" style={{ minHeight: "350px" }} />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
               <div className="absolute bottom-6 left-6">
-                <h3 className="font-display text-2xl font-bold text-white">Our Camp</h3>
-                <p className="text-white/80 text-sm mt-1">Right on the Ganga banks, Rishikesh</p>
+                <h3 className="font-display text-2xl font-bold text-foreground">Our Camp</h3>
+                <p className="text-foreground/80 text-sm mt-1">Right on the Ganga banks, Rishikesh</p>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {campingActivities.map((act) => (
                 <div key={act.title} className="glass-card p-5 card-hover">
                   <span className="text-3xl block mb-3">{act.icon}</span>
-                  <h3 className="font-display text-base font-bold text-white mb-1">{act.title}</h3>
+                  <h3 className="font-display text-base font-bold text-foreground mb-1">{act.title}</h3>
                   <p className="text-muted-foreground text-xs leading-relaxed mb-3">{act.desc}</p>
-                  <span className="text-saffron text-xs font-semibold">{act.price}</span>
+                  <span className="text-primary text-xs font-semibold">{act.price}</span>
                 </div>
               ))}
             </div>
@@ -130,8 +130,8 @@ export default function Camping() {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-saffron text-sm font-semibold tracking-widest uppercase">Adrenaline Zone</span>
-            <h2 className="section-title text-white mt-2">Adventure Sports</h2>
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">Adrenaline Zone</span>
+            <h2 className="section-title text-foreground mt-2">Adventure Sports</h2>
             <p className="section-subtitle">Push your limits with Rishikesh's most thrilling adventure activities.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -139,10 +139,10 @@ export default function Camping() {
               <div key={sport.title} className="glass-card p-7 card-hover flex items-start gap-5">
                 <span className="text-5xl flex-shrink-0">{sport.icon}</span>
                 <div>
-                  <h3 className="font-display text-xl font-bold text-white mb-1">{sport.title}</h3>
+                  <h3 className="font-display text-xl font-bold text-foreground mb-1">{sport.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-3">{sport.desc}</p>
                   <div className="flex items-center gap-4">
-                    <span className="text-saffron font-bold text-lg font-display">{sport.price}</span>
+                    <span className="text-primary font-bold text-lg font-display">{sport.price}</span>
                     <span className="text-muted-foreground text-xs bg-muted px-2 py-1 rounded-full">{sport.duration}</span>
                   </div>
                 </div>
@@ -153,28 +153,28 @@ export default function Camping() {
       </section>
 
       {/* Combo Packages */}
-      <section className="py-16 px-4 bg-navy-light">
+      <section className="py-16 px-4 bg-[#FFF9F5]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-saffron text-sm font-semibold tracking-widest uppercase">Save More</span>
-            <h2 className="section-title text-white mt-2">Combo Packages</h2>
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">Save More</span>
+            <h2 className="section-title text-foreground mt-2">Combo Packages</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {comboPkg.map((pkg, i) => (
               <div key={pkg.title} className={`glass-card p-7 card-hover ${i === 2 ? "border-saffron/30 bg-saffron/5" : ""}`}>
-                {i === 2 && <span className="block text-center mb-3 text-saffron text-xs font-bold tracking-widest uppercase">Best Value</span>}
-                <h3 className="font-display text-xl font-bold text-white mb-4">{pkg.title}</h3>
+                {i === 2 && <span className="block text-center mb-3 text-primary text-xs font-bold tracking-widest uppercase">Best Value</span>}
+                <h3 className="font-display text-xl font-bold text-foreground mb-4">{pkg.title}</h3>
                 <ul className="space-y-2 mb-6">
                   {pkg.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-white/80 text-sm">
+                    <li key={item} className="flex items-center gap-2 text-foreground/80 text-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-saffron" />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-saffron font-display">{pkg.price}</span>
-                  <Link to="/contact" className="px-4 py-2 rounded-full bg-river-blue text-white text-xs font-semibold hover:bg-primary/90 transition-all duration-300">
+                  <span className="text-2xl font-bold text-primary font-display">{pkg.price}</span>
+                  <Link to="/contact" className="px-4 py-2 rounded-full bg-river-blue text-foreground text-xs font-semibold hover:bg-primary/90 transition-all duration-300">
                     Book
                   </Link>
                 </div>

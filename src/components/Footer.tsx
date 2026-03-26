@@ -13,17 +13,17 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy border-t border-white/10">
+    <footer className="bg-[#FFFDFB] border-t border-primary/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-river-blue to-forest-green flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
                 <Mountain className="w-6 h-6 text-white" />
               </div>
-              <span className="font-display text-2xl font-bold text-white">
-                Akihi <span className="text-saffron">Tales</span>
+              <span className="font-display text-2xl font-bold text-foreground">
+                Akihi <span className="text-primary">Tales</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">

@@ -48,44 +48,44 @@ export default function About() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${heroMountains})` }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/95" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="relative text-center px-4 max-w-4xl mx-auto pt-20">
-          <span className="text-saffron text-sm font-semibold tracking-widest uppercase font-body">Our Story</span>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mt-3 mb-5">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-river-blue to-saffron">Akihi Tales</span>
+          <span className="text-white/80 text-sm font-semibold tracking-widest uppercase font-body">Our Story</span>
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mt-3 mb-5 drop-shadow-xl">
+            About <span className="text-gradient">Akihi Tales</span>
           </h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+          <p className="text-white/90 text-lg max-w-2xl mx-auto drop-shadow-md">
             A travel agency born from the mountains, built on love for adventure, and powered by genuine hospitality.
           </p>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-4 bg-navy-light">
+      <section className="py-20 px-4 bg-[#FFF9F5]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-saffron text-sm font-semibold tracking-widest uppercase">Who We Are</span>
-              <h2 className="font-display text-4xl font-bold text-white mt-2 mb-6">Curating Adventures Since Day One</h2>
+              <span className="text-primary text-sm font-semibold tracking-widest uppercase">Who We Are</span>
+              <h2 className="font-display text-4xl font-bold text-foreground mt-2 mb-6">Curating Adventures Since Day One</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-white">Akihi Tales</strong> is a travel agency based in the adventure capital of India — <strong className="text-saffron">Rishikesh, Uttarakhand</strong>. We were born from a simple belief: travel should be safe, fun, and deeply memorable.
+                  <strong className="text-foreground font-bold">Akihi Tales</strong> is a travel agency based in the adventure capital of India — <strong className="text-primary">Rishikesh, Uttarakhand</strong>. We were born from a simple belief: travel should be safe, fun, and deeply memorable.
                 </p>
                 <p>
                   We curate adventure trips, rafting expeditions, riverside camping stays, and Himalayan journeys across Uttarakhand. Whether you're a college student seeking a budget getaway, a couple celebrating an anniversary, or a family embarking on a sacred pilgrimage — we have something crafted just for you.
                 </p>
                 <p>
-                  Our founder <strong className="text-white">Tammy</strong> and our team of local experts bring years of experience and authentic knowledge of the Himalayas to every trip. We don't just plan itineraries — we pour our hearts into every experience.
+                  Our founder <strong className="text-foreground font-bold">Tammy</strong> and our team of local experts bring years of experience and authentic knowledge of the Himalayas to every trip. We don't just plan itineraries — we pour our hearts into every experience.
                 </p>
                 <p>
                   From the white-water rapids of the Ganga to the divine temples of Char Dham, from bungee jumping at 109m to stargazing by a bonfire — Akihi Tales is your trusted companion for every adventure.
                 </p>
               </div>
               <div className="flex items-center gap-3 mt-8">
-                <Link to="/packages" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-river-blue text-white font-semibold text-sm hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5">
+                <Link to="/packages" className="btn-primary !px-6 !py-3">
                   Explore Packages <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-all duration-300">
+                <Link to="/contact" className="btn-outline !px-6 !py-3">
                   Contact Us
                 </Link>
               </div>
@@ -100,17 +100,17 @@ export default function About() {
               <div className="col-span-2 glass-card p-5 text-center">
                 <div className="flex justify-center gap-8">
                   <div>
-                    <p className="text-3xl font-bold text-saffron font-display">10K+</p>
+                    <p className="text-3xl font-bold text-primary font-display">10K+</p>
                     <p className="text-muted-foreground text-xs">Happy Travelers</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-saffron font-display">5+</p>
+                    <p className="text-3xl font-bold text-primary font-display">5+</p>
                     <p className="text-muted-foreground text-xs">Years Active</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-saffron font-display">4.9</p>
+                    <p className="text-3xl font-bold text-primary font-display">4.9</p>
                     <p className="text-muted-foreground text-xs flex items-center gap-1">
-                      <Star className="w-3 h-3 text-saffron fill-saffron" /> Rating
+                      <Star className="w-3 h-3 text-primary fill-primary" /> Rating
                     </p>
                   </div>
                 </div>
@@ -124,15 +124,15 @@ export default function About() {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-saffron text-sm font-semibold tracking-widest uppercase">The People</span>
-            <h2 className="section-title text-white mt-2">Meet the Team</h2>
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">The People</span>
+            <h2 className="section-title mt-2">Meet the Team</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {team.map((member) => (
               <div key={member.name} className={`glass-card p-7 card-hover bg-gradient-to-br ${member.color}`}>
                 <div className="text-5xl mb-4">{member.emoji}</div>
-                <h3 className="font-display text-xl font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-saffron text-sm font-medium mb-4">{member.role}</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-1">{member.name}</h3>
+                <p className="text-primary text-sm font-medium mb-4">{member.role}</p>
                 <p className="text-muted-foreground text-sm leading-relaxed">{member.desc}</p>
               </div>
             ))}
@@ -141,17 +141,17 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-4 bg-navy-light">
+      <section className="py-20 px-4 bg-[#FFF9F5]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-saffron text-sm font-semibold tracking-widest uppercase">What We Stand For</span>
-            <h2 className="section-title text-white mt-2">Our Values</h2>
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">What We Stand For</span>
+            <h2 className="section-title mt-2">Our Values</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v) => (
               <div key={v.title} className="glass-card p-6 card-hover group">
                 <span className="text-4xl block mb-3 group-hover:scale-110 transition-transform duration-300">{v.icon}</span>
-                <h3 className="font-display text-lg font-bold text-white mb-2">{v.title}</h3>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">{v.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
@@ -162,8 +162,8 @@ export default function About() {
       {/* Instagram CTA */}
       <section className="py-16 px-4 bg-background text-center">
         <div className="max-w-2xl mx-auto">
-          <Heart className="w-10 h-10 text-saffron mx-auto mb-4" />
-          <h2 className="font-display text-3xl font-bold text-white mb-3">Follow Our Adventures</h2>
+          <Heart className="w-10 h-10 text-primary mx-auto mb-4" />
+          <h2 className="font-display text-3xl font-bold text-foreground mb-3">Follow Our Adventures</h2>
           <p className="text-muted-foreground mb-6">Join 50,000+ followers on Instagram for daily trip inspiration, reels, and travel stories from the Himalayas.</p>
           <a
             href="https://instagram.com/akihi_tales"

@@ -4,6 +4,7 @@ import { Send, MapPin, Calendar, Users, User, Phone, MessageSquare } from "lucid
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { siteConfig } from "@/site-config";
 import heroMountains from "@/assets/hero-mountains.webp";
 
 const destinations = [
@@ -53,30 +54,30 @@ export default function CustomTrips() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-30" style={{ backgroundImage: `url(${heroMountains})` }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/80 to-navy" />
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${heroMountains})` }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="relative max-w-4xl mx-auto text-center">
-          <span className="text-saffron text-sm font-semibold tracking-widest uppercase font-body">Personalized For You</span>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mt-3 mb-5">
+          <span className="text-white/80 text-sm font-semibold tracking-widest uppercase font-body">Personalized For You</span>
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mt-3 mb-5 drop-shadow-xl">
             Plan Your Dream
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-river-blue to-saffron">
+            <span className="text-gradient block">
               Custom Trip
             </span>
           </h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+          <p className="text-white/90 text-lg max-w-2xl mx-auto drop-shadow-md">
             Tell us your dates, number of people, and destination — and we'll plan everything for you.
           </p>
         </div>
       </section>
 
       {/* Feature pills */}
-      <section className="py-12 px-4 bg-navy-light">
+      <section className="py-12 px-4 bg-[#FFF9F5]">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {features.map((f) => (
               <div key={f.title} className="glass-card p-5 text-center card-hover">
                 <span className="text-3xl block mb-2">{f.icon}</span>
-                <h3 className="text-white font-semibold text-sm">{f.title}</h3>
+                <h3 className="text-foreground font-semibold text-sm">{f.title}</h3>
                 <p className="text-muted-foreground text-xs mt-1">{f.desc}</p>
               </div>
             ))}
@@ -88,18 +89,18 @@ export default function CustomTrips() {
       <section className="py-16 px-4 bg-background">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="font-display text-3xl font-bold text-white mb-3">Build Your Itinerary</h2>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-3">Build Your Itinerary</h2>
             <p className="text-muted-foreground">Fill in the form and our team will reach out within 24 hours.</p>
           </div>
 
           {submitted ? (
             <div className="glass-card p-10 text-center">
               <span className="text-6xl block mb-4">🎉</span>
-              <h3 className="font-display text-2xl font-bold text-white mb-3">Request Received!</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-3">Request Received!</h3>
               <p className="text-muted-foreground mb-6">
                 Thank you, {form.name || "friend"}! We'll WhatsApp you within 24 hours with a personalised plan.
               </p>
-              <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-river-blue text-white font-semibold text-sm hover:bg-primary/90 transition-all duration-300">
+              <Link to="/" className="btn-primary">
                 Back to Home
               </Link>
             </div>
@@ -107,8 +108,8 @@ export default function CustomTrips() {
             <form onSubmit={handleSubmit} className="glass-card p-8 space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="text-white/80 text-sm font-medium flex items-center gap-2 mb-2">
-                    <User className="w-4 h-4 text-saffron" /> Your Name
+                  <label className="text-foreground/80 text-sm font-medium flex items-center gap-2 mb-2">
+                    <User className="w-4 h-4 text-primary" /> Your Name
                   </label>
                   <input
                     name="name"
@@ -116,12 +117,12 @@ export default function CustomTrips() {
                     onChange={handleChange}
                     required
                     placeholder="Arjun Sharma"
-                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-white placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-all"
+                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-all"
                   />
                 </div>
                 <div>
-                  <label className="text-white/80 text-sm font-medium flex items-center gap-2 mb-2">
-                    <Phone className="w-4 h-4 text-saffron" /> Phone / WhatsApp
+                  <label className="text-foreground/80 text-sm font-medium flex items-center gap-2 mb-2">
+                    <Phone className="w-4 h-4 text-primary" /> Phone / WhatsApp
                   </label>
                   <input
                     name="phone"
@@ -129,21 +130,21 @@ export default function CustomTrips() {
                     onChange={handleChange}
                     required
                     placeholder="+91 98765 43210"
-                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-white placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-all"
+                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-white/80 text-sm font-medium flex items-center gap-2 mb-2">
-                  <MapPin className="w-4 h-4 text-saffron" /> Destination
+                <label className="text-foreground/80 text-sm font-medium flex items-center gap-2 mb-2">
+                  <MapPin className="w-4 h-4 text-primary" /> Destination
                 </label>
                 <select
                   name="destination"
                   value={form.destination}
                   onChange={handleChange}
                   required
-                  className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all appearance-none"
+                  className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all appearance-none"
                 >
                   <option value="" className="text-muted-foreground">Select destination...</option>
                   {destinations.map((d) => (
@@ -154,8 +155,8 @@ export default function CustomTrips() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="text-white/80 text-sm font-medium flex items-center gap-2 mb-2">
-                    <Calendar className="w-4 h-4 text-saffron" /> Start Date
+                  <label className="text-foreground/80 text-sm font-medium flex items-center gap-2 mb-2">
+                    <Calendar className="w-4 h-4 text-primary" /> Start Date
                   </label>
                   <input
                     type="date"
@@ -163,26 +164,26 @@ export default function CustomTrips() {
                     value={form.startDate}
                     onChange={handleChange}
                     required
-                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all [color-scheme:dark]"
+                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all [color-scheme:dark]"
                   />
                 </div>
                 <div>
-                  <label className="text-white/80 text-sm font-medium flex items-center gap-2 mb-2">
-                    <Calendar className="w-4 h-4 text-saffron" /> End Date
+                  <label className="text-foreground/80 text-sm font-medium flex items-center gap-2 mb-2">
+                    <Calendar className="w-4 h-4 text-primary" /> End Date
                   </label>
                   <input
                     type="date"
                     name="endDate"
                     value={form.endDate}
                     onChange={handleChange}
-                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all [color-scheme:dark]"
+                    className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all [color-scheme:dark]"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-white/80 text-sm font-medium flex items-center gap-2 mb-2">
-                  <Users className="w-4 h-4 text-saffron" /> Number of People
+                <label className="text-foreground/80 text-sm font-medium flex items-center gap-2 mb-2">
+                  <Users className="w-4 h-4 text-primary" /> Number of People
                 </label>
                 <input
                   type="number"
@@ -192,13 +193,13 @@ export default function CustomTrips() {
                   required
                   min="1"
                   placeholder="e.g. 4"
-                  className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-white placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                  className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all"
                 />
               </div>
 
               <div>
-                <label className="text-white/80 text-sm font-medium flex items-center gap-2 mb-2">
-                  <MessageSquare className="w-4 h-4 text-saffron" /> Tell us more
+                <label className="text-foreground/80 text-sm font-medium flex items-center gap-2 mb-2">
+                  <MessageSquare className="w-4 h-4 text-primary" /> Tell us more
                 </label>
                 <textarea
                   name="message"
@@ -206,18 +207,18 @@ export default function CustomTrips() {
                   onChange={handleChange}
                   placeholder="Budget, special requirements, preferred activities, accommodation type..."
                   rows={4}
-                  className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-white placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all resize-none"
+                  className="w-full bg-muted border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-all resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 py-4 rounded-full bg-river-blue text-white font-bold text-sm hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30"
+                className="w-full btn-primary"
               >
                 <Send className="w-4 h-4" /> Send My Trip Request
               </button>
               <p className="text-center text-muted-foreground text-xs">
-                Or WhatsApp us directly at +91 99999 99999
+                Or WhatsApp us directly at +{siteConfig.whatsapp.number.replace(/^91/, '91 ')}
               </p>
             </form>
           )}

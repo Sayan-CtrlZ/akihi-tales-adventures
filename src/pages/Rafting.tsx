@@ -3,7 +3,7 @@ import { ArrowRight, Shield, Clock, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import rafting from "@/assets/rafting.jpeg";
+import rafting from "@/assets/ex2.jpg";
 import heroMountains from "@/assets/hero-mountains.webp";
 
 const packages = [
@@ -69,46 +69,46 @@ export default function Rafting() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${rafting})` }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="relative text-center px-4 max-w-4xl mx-auto pt-20">
-          <span className="text-saffron text-sm font-semibold tracking-widest uppercase font-body">White Water Adventure</span>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-3 mb-5">
+          <span className="text-white/80 text-sm font-semibold tracking-widest uppercase font-body">White Water Adventure</span>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-3 mb-5 drop-shadow-xl">
             River Rafting in
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-river-blue to-saffron">
+            <span className="text-gradient">
               Rishikesh
             </span>
           </h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8 drop-shadow-md">
             Conquer the mighty Ganga through Grade II–V rapids. Beginner packages to expert expeditions — we have it all.
           </p>
-          <Link to="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-river-blue text-white font-semibold text-sm hover:bg-primary/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30">
+          <Link to="/contact" className="btn-primary !px-7 !py-3.5">
             Book Now <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
 
       {/* Packages */}
-      <section className="py-20 px-4 bg-navy-light">
+      <section className="py-20 px-4 bg-[#FFF9F5]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-saffron text-sm font-semibold tracking-widest uppercase">Rafting Routes</span>
-            <h2 className="section-title text-white mt-2">Choose Your Route</h2>
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">Rafting Routes</span>
+            <h2 className="section-title mt-2">Choose Your Route</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {packages.map((pkg) => (
               <div key={pkg.km} className="glass-card p-7 card-hover relative">
                 {pkg.badge && (
-                  <span className="absolute top-5 right-5 px-3 py-1 rounded-full bg-saffron/20 border border-saffron/40 text-saffron text-xs font-semibold">
+                  <span className="absolute top-5 right-5 px-3 py-1 rounded-full bg-saffron/20 border border-saffron/40 text-primary text-xs font-semibold">
                     {pkg.badge}
                   </span>
                 )}
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-river-blue/30 to-forest-green/20 flex flex-col items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg leading-none">{pkg.km}</span>
+                    <span className="text-foreground font-bold text-lg leading-none">{pkg.km}</span>
                     <span className="text-muted-foreground text-xs">route</span>
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-white">{pkg.title}</h3>
+                    <h3 className="font-display text-xl font-bold text-foreground">{pkg.title}</h3>
                     <div className="flex items-center gap-3 mt-1">
                       <span className="text-muted-foreground text-xs flex items-center gap-1"><Clock className="w-3 h-3" />{pkg.duration}</span>
                       <span className={`text-xs font-semibold ${pkg.difficultyColor}`}>● {pkg.difficulty}</span>
@@ -119,7 +119,7 @@ export default function Rafting() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">{pkg.desc}</p>
                 <ul className="space-y-1.5 mb-6">
                   {pkg.highlights.map((h) => (
-                    <li key={h} className="flex items-center gap-2 text-white/80 text-sm">
+                    <li key={h} className="flex items-center gap-2 text-foreground/80 text-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-saffron flex-shrink-0" />
                       {h}
                     </li>
@@ -127,10 +127,10 @@ export default function Rafting() {
                 </ul>
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-3xl font-bold text-saffron font-display">{pkg.price}</span>
+                    <span className="text-3xl font-bold text-primary font-display">{pkg.price}</span>
                     <span className="text-muted-foreground text-sm ml-1">/ person</span>
                   </div>
-                  <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-river-blue text-white text-sm font-semibold hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5">
+                  <Link to="/contact" className="btn-primary !px-5 !py-2.5">
                     Book <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -144,8 +144,8 @@ export default function Rafting() {
       <section className="py-16 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-saffron text-sm font-semibold tracking-widest uppercase">Your Safety Matters</span>
-            <h2 className="section-title text-white mt-2">Safety First, Always</h2>
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">Your Safety Matters</span>
+            <h2 className="section-title mt-2">Safety First, Always</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {safety.map((s) => (
@@ -153,7 +153,7 @@ export default function Rafting() {
                 <div className="w-14 h-14 rounded-2xl bg-river-blue/20 border border-river-blue/30 flex items-center justify-center mx-auto mb-4 text-river-blue">
                   {s.icon}
                 </div>
-                <h3 className="font-display text-lg font-bold text-white mb-2">{s.title}</h3>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">{s.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
@@ -166,14 +166,14 @@ export default function Rafting() {
         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${heroMountains})` }} />
         <div className="absolute inset-0 bg-gradient-to-r from-river-blue/80 to-forest-green/80" />
         <div className="relative max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Ready to Conquer the Ganga?</h2>
-          <p className="text-white/80 mb-8">Book your rafting adventure today. Groups, couples, solo travelers — all welcome!</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Conquer the Ganga?</h2>
+          <p className="text-foreground/80 mb-8">Book your rafting adventure today. Groups, couples, solo travelers — all welcome!</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="px-7 py-3.5 rounded-full bg-white text-navy font-bold text-sm hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
               Book Now
             </Link>
             <a href="https://wa.me/919999999999?text=I%20want%20to%20book%20rafting%20in%20Rishikesh" target="_blank" rel="noopener noreferrer"
-              className="px-7 py-3.5 rounded-full border-2 border-white text-white font-bold text-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-1">
+              className="px-7 py-3.5 rounded-full border-2 border-white text-foreground font-bold text-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-1">
               WhatsApp Us
             </a>
           </div>

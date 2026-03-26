@@ -1,7 +1,11 @@
+import { siteConfig } from "@/site-config";
+
 export default function WhatsAppButton() {
+  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(siteConfig.whatsapp.message)}`;
+  
   return (
     <a
-      href="https://wa.me/919999999999?text=Hi%20Akihi%20Tales!%20I%20want%20to%20book%20an%20adventure%20trip."
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 group"
@@ -20,7 +24,7 @@ export default function WhatsAppButton() {
           </svg>
         </div>
         {/* Tooltip */}
-        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-white text-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background text-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none border border-border">
           Chat with us!
         </span>
       </div>
