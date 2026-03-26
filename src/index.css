@@ -102,7 +102,13 @@
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-primary/10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] rounded-2xl transition-all duration-300;
+    @apply bg-white/80 backdrop-blur-md border border-primary/10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] rounded-2xl transition-all duration-300 active:scale-[0.98] sm:active:scale-100;
+  }
+
+  @media (max-width: 640px) {
+    .glass-card {
+      @apply rounded-3xl;
+    }
   }
 
   .text-gradient {
@@ -173,7 +179,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-300 shadow-md;
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-300 shadow-md active:scale-95;
     background: linear-gradient(90deg, #FF8A3D, #FF6FAE, #FFD76A);
     color: white;
     background-size: 200% auto;
@@ -186,11 +192,11 @@
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-semibold text-sm border border-primary/20 text-primary transition-all duration-300 hover:bg-primary/5 hover:border-primary/40;
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-semibold text-sm border border-primary/20 text-primary transition-all duration-300 hover:bg-primary/5 hover:border-primary/40 active:scale-95;
   }
 
   .btn-whatsapp {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-300 shadow-md;
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-300 shadow-md active:scale-95;
     background: #25D366;
     color: white;
   }
@@ -212,7 +218,7 @@
   }
 
   .card-hover {
-    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,61,0.15)] hover:border-primary/30;
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,138,61,0.15)] hover:border-primary/30 active:scale-[0.98] sm:active:scale-100;
   }
 }
 

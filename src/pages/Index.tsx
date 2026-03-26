@@ -194,7 +194,7 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {yatraPackages.map((pkg) => (
-              <div key={pkg.title} className="bg-white/70 backdrop-blur-md rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-white/50 flex flex-col group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-primary/20">
+              <div key={pkg.title} className="bg-white/70 backdrop-blur-md rounded-3xl sm:rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-white/50 flex flex-col group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-primary/20">
                 <div className="relative h-64 overflow-hidden">
                   <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -227,7 +227,7 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {oneDayTours.map((tour) => (
-              <div key={tour.title} className="bg-white/70 backdrop-blur-md rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-white/50 group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
+              <div key={tour.title} className="bg-white/70 backdrop-blur-md rounded-3xl sm:rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-white/50 group transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
                 <div className="relative h-48 overflow-hidden">
                   <img src={tour.image} alt={tour.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 rounded-full text-[10px] font-bold text-primary uppercase tracking-wider">Cab Included</div>
@@ -293,7 +293,7 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-white/70 backdrop-blur-md p-8 rounded-2xl border border-white/50 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 relative">
+              <div key={t.name} className="bg-white/70 backdrop-blur-md p-8 rounded-3xl sm:rounded-2xl border border-white/50 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 relative">
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.stars }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-saffron fill-saffron" />

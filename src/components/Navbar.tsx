@@ -89,24 +89,31 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden fixed inset-x-0 top-16 transition-all duration-300 ease-in-out z-40 ${
+          menuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
-        <div className="backdrop-blur-xl bg-background/95 border-t border-primary/10 px-4 py-4 space-y-1">
-          {navLinks.map((link) => (
+        <div className="backdrop-blur-2xl bg-background/95 border-b border-primary/10 px-4 py-8 space-y-3 shadow-2xl">
+          {navLinks.map((link, idx) => (
             <Link
               key={link.href}
               to={link.href}
-              className={`block px-5 py-3 rounded-full text-base font-bold transition-all duration-300 ${
+              className={`block px-5 py-4 rounded-3xl text-base font-bold transition-all duration-300 active:scale-95 ${
                 location.pathname === link.href
-                  ? "bg-primary text-white shadow-md"
+                  ? "bg-primary text-white shadow-lg"
                   : "text-foreground/80 hover:text-primary hover:bg-primary/5"
               }`}
+              style={{ transitionDelay: `${idx * 50}ms` }}
             >
               {link.label}
             </Link>
           ))}
+          <Link
+            to="/contact"
+            className="block w-full text-center px-5 py-4 rounded-3xl bg-river-blue text-white text-base font-bold shadow-lg active:scale-95 mt-4"
+          >
+            Book Your Adventure
+          </Link>
         </div>
       </div>
     </nav>
