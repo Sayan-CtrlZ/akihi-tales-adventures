@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Mountain } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -38,11 +39,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-              <Mountain className="w-5 h-5 text-white" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden shadow-lg border-2 border-primary/20 bg-white transition-transform group-hover:scale-105">
+              <img src={logo} alt="Akihi Tales" className="w-full h-full object-cover" />
             </div>
-            <span className="font-display text-xl font-bold text-foreground tracking-wide">
+            <span className="font-display text-xl lg:text-2xl font-bold text-foreground tracking-wide">
               Akihi <span className="text-primary">Tales</span>
             </span>
           </Link>
@@ -53,12 +54,12 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                className={`px-4 py-2.5 text-sm font-bold rounded-full transition-all duration-300 ${
                   location.pathname === link.href
-                    ? "text-primary"
+                    ? (location.pathname === "/" ? (scrolled ? "bg-primary text-white shadow-md" : "bg-white text-primary shadow-lg") : "bg-primary text-white shadow-md")
                     : (location.pathname === "/" ? scrolled : true) 
-                      ? "text-foreground/70 hover:text-foreground hover:bg-black/5" 
-                      : "text-white/90 hover:text-white hover:bg-white/10"
+                      ? "text-foreground hover:text-primary hover:bg-primary/5" 
+                      : "text-white hover:bg-white/10"
                 }`}
               >
                 {link.label}
@@ -96,10 +97,10 @@ export default function Navbar() {
             <Link
               key={link.href}
               to={link.href}
-              className={`block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
+              className={`block px-5 py-3 rounded-full text-base font-bold transition-all duration-300 ${
                 location.pathname === link.href
-                  ? "bg-primary/10 text-primary"
-                  : "text-foreground/80 hover:text-foreground hover:bg-black/5"
+                  ? "bg-primary text-white shadow-md"
+                  : "text-foreground/80 hover:text-primary hover:bg-primary/5"
               }`}
             >
               {link.label}

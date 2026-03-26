@@ -15,6 +15,7 @@ import kedarnathAsset from "@/assets/kedarnath.jpg";
 import gangotriTempleAsset from "@/assets/gangotri-temple.webp";
 import aboutUsAsset from "@/assets/image.png";
 
+
 const packages = [
   {
     title: "River Rafting",

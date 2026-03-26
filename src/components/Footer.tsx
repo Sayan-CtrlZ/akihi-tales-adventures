@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { Mountain, Instagram, Phone, MapPin, Mail, ChevronRight } from "lucide-react";
+import { Instagram, Phone, MapPin, Mail, ChevronRight } from "lucide-react";
+import { siteConfig } from "@/site-config";
+import logo from "@/assets/logo.jpg";
 
 const quickLinks = [
   { href: "/packages", label: "All Packages" },
@@ -18,9 +20,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                <Mountain className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg border-2 border-primary/20 bg-white">
+                <img src={logo} alt="Akihi Tales" className="w-full h-full object-cover" />
               </div>
               <span className="font-display text-2xl font-bold text-foreground">
                 Akihi <span className="text-primary">Tales</span>
@@ -39,7 +41,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://wa.me/919999999999"
+                href={`https://wa.me/${siteConfig.whatsapp.number}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
@@ -49,7 +51,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="tel:+919999999999"
+                href={`tel:${siteConfig.whatsapp.number}`}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-river-blue flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
               >
                 <Phone className="w-5 h-5 text-white" />
@@ -110,8 +112,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-saffron flex-shrink-0" />
-                <a href="tel:+919999999999" className="text-white text-sm hover:text-saffron transition-colors">
-                  +91 99999 99999
+                <a href={`tel:${siteConfig.whatsapp.number}`} className="text-white text-sm hover:text-saffron transition-colors">
+                  +{siteConfig.whatsapp.number.replace(/^91/, '91 ')}
                 </a>
               </div>
               <div className="flex items-center gap-3">
