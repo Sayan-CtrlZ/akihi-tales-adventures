@@ -5,6 +5,7 @@ import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/packages", label: "Packages" },
   { href: "/rafting", label: "Rafting" },
   { href: "/camping", label: "Camping" },
   { href: "/custom-trips", label: "Custom Trips" },

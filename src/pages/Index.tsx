@@ -125,7 +125,7 @@ export default function Index() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90svh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000"
           style={{ backgroundImage: `url(${gangaAartiAsset})`, backgroundAttachment: "fixed" }}
@@ -135,7 +135,7 @@ export default function Index() {
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
 
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-xl">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-xl px-2">
             Adventure Awaits in
             <span className="block text-gradient">Rishikesh</span>
           </h1>
@@ -152,7 +152,7 @@ export default function Index() {
       </section>
 
       {/* ── POPULAR PACKAGES (Activities) ── */}
-      <section id="packages" className="py-20 px-4 bg-transparent relative overflow-hidden">
+      <section id="packages" className="py-12 sm:py-20 px-4 bg-transparent relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-14">
             <h2 className="section-title text-[#2F2F2F]">Adventure Packages</h2>
@@ -186,7 +186,7 @@ export default function Index() {
       </section>
 
       {/* ── YATRA PACKAGES ── */}
-      <section id="yatra-packages" className="py-20 px-4 bg-transparent relative">
+      <section id="yatra-packages" className="py-12 sm:py-20 px-4 bg-transparent relative">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-between mb-12">
             <h2 className="font-display text-4xl font-bold text-[#2F2F2F]">Yatra Packages</h2>
@@ -216,7 +216,7 @@ export default function Index() {
       </section>
 
       {/* ── ONE DAY TOURS & CAB BOOKING ── */}
-      <section id="one-day-tours" className="py-20 px-4 bg-transparent relative">
+      <section id="one-day-tours" className="py-12 sm:py-20 px-4 bg-transparent relative">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-between mb-12">
             <div>
@@ -251,7 +251,7 @@ export default function Index() {
       </section>
 
       {/* ── ABOUT US SUMMARY ── */}
-      <section id="about-us" className="py-20 px-4 bg-transparent relative">
+      <section id="about-us" className="py-12 sm:py-20 px-4 bg-transparent relative">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
@@ -286,7 +286,7 @@ export default function Index() {
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section id="reviews" className="py-20 px-4 bg-transparent relative">
+      <section id="reviews" className="py-12 sm:py-20 px-4 bg-transparent relative">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-14">
             <h2 className="section-title">Happy Travelers</h2>

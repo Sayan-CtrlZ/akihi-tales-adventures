@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Akihi Tales",
   whatsapp: {
-    number: "919910411604",
+    number: "918091633301",
     message: "Hi Akihi Tales! I want to book an adventure trip.",
   },
   contact: {

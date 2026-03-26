@@ -53,12 +53,12 @@ export default function CustomTrips() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-[90svh] lg:min-h-0 flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${heroMountains})` }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="relative max-w-4xl mx-auto text-center">
           <span className="text-white/80 text-sm font-semibold tracking-widest uppercase font-body">Personalized For You</span>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white mt-3 mb-5 drop-shadow-xl">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-3 mb-5 drop-shadow-xl px-2">
             Plan Your Dream
             <span className="text-gradient block">
               Custom Trip
@@ -71,9 +71,9 @@ export default function CustomTrips() {
       </section>
 
       {/* Feature pills */}
-      <section className="py-12 px-4 bg-[#FFF9F5]">
+      <section className="py-10 sm:py-12 px-4 bg-[#FFF9F5]">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {features.map((f) => (
               <div key={f.title} className="glass-card p-5 text-center card-hover">
                 <span className="text-3xl block mb-2">{f.icon}</span>
@@ -86,7 +86,7 @@ export default function CustomTrips() {
       </section>
 
       {/* Form */}
-      <section className="py-16 px-4 bg-background">
+      <section className="py-12 sm:py-16 px-4 bg-background">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl font-bold text-foreground mb-3">Build Your Itinerary</h2>

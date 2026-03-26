@@ -48,7 +48,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
         <div className="relative max-w-4xl mx-auto text-center">
           <span className="text-primary text-sm font-semibold tracking-widest uppercase font-body">Let's Connect</span>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mt-3 mb-5">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mt-3 mb-5 px-2">
             Book Your Adventure /
             <span className="text-gradient">
               Contact Us
@@ -63,7 +63,7 @@ export default function Contact() {
       {/* Quick Contact Buttons */}
       <section className="py-10 px-4 bg-[#FFF9F5]">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <a
               href={`https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(siteConfig.whatsapp.message)}`}
               target="_blank"
@@ -78,7 +78,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-foreground font-semibold text-sm">WhatsApp Us</p>
-                <p className="text-muted-foreground text-xs">+91 99999 99999</p>
+                <p className="text-muted-foreground text-xs">+{siteConfig.whatsapp.number.replace(/^91/, '91 ')}</p>
               </div>
             </a>
 
@@ -91,7 +91,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-foreground font-semibold text-sm">Call Us</p>
-                <p className="text-muted-foreground text-xs">+91 99999 99999</p>
+                <p className="text-muted-foreground text-xs">+{siteConfig.whatsapp.number.replace(/^91/, '91 ')}</p>
               </div>
             </a>
 
@@ -213,7 +213,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                    <a href="tel:+919999999999" className="text-foreground text-sm hover:text-primary transition-colors">+91 99999 99999</a>
+                    <a href={`tel:${siteConfig.whatsapp.number}`} className="text-foreground text-sm hover:text-primary transition-colors">+{siteConfig.whatsapp.number.replace(/^91/, '91 ')}</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Instagram className="w-5 h-5 text-primary flex-shrink-0" />
@@ -239,7 +239,7 @@ export default function Contact() {
               <div className="glass-card p-5 text-center">
                 <p className="text-muted-foreground text-sm mb-2">Prefer to chat instantly?</p>
                 <a
-                  href="https://wa.me/919999999999?text=Hi%20Akihi%20Tales!%20I%20want%20to%20book%20a%20trip."
+                  href={`https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(siteConfig.whatsapp.message)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp"
